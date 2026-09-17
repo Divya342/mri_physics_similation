@@ -1,0 +1,23 @@
+# Interactive MRI Signal Contrast & Physics Simulator
+
+An interactive, browser-based simulator demonstrating structural tissue contrast dynamics using the steady-state Gradient-Echo signal equation. Built specifically as a teaching tool for medical imaging physicists, radiologists, and MRI technologists.
+
+## Live Application
+👉 https://mriphysicssimilation-qt3jo2boxrmqtrfcjgbzhe.streamlit.app/
+
+## Core Features
+* **Anatomical Brain Phantom:** A synthetic matrix modeling White Matter, Gray Matter, and CSF structural environments.
+* **Real-Time Physics Engine:** Employs the steady-state Ernst Angle math loops to render tissue interactions natively.
+* **One-Click Clinical Presets:** Instantly snap sliders into standard **T1-Weighted**, **T2-Weighted**, and **Proton Density (PD)** configurations.
+* **Simultaneous Graph Tracking:** View longitudinal recovery vectors and transverse decay lines update side-by-side with the image matrix.
+
+## ⚙️ Mathematical Framework
+Tissue signal intensities ($S$) are calculated using the sequence equation:
+
+$$S = \rho \cdot \frac{\sin(\alpha) \cdot (1 - e^{-TR/T1})}{1 - \cos(\alpha) \cdot e^{-TR/T1}} \cdot e^{-TE/T2}$$
+
+## 🛠️ Technology Stack
+* Python 3
+* Streamlit (UI Framework)
+* NumPy (Matrix Calculations)
+* Matplotlib (Image & Graph Rendering)
